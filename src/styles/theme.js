@@ -1,0 +1,33 @@
+export const lightTheme = {
+  primary: '#0d9488',
+  primaryHover: '#0f766e',
+  primaryMuted: 'rgba(13, 148, 136, 0.12)',
+  background: '#faf9f7',
+  backgroundAlt: '#f0eeeb',
+  text: '#1c1917',
+  textMuted: '#57534e',
+  cardBackground: '#ffffff',
+  cardBorder: 'rgba(0, 0, 0, 0.06)',
+  cardShadow: '0 4px 24px rgba(0, 0, 0, 0.06)',
+  cardShadowHover: '0 12px 40px rgba(0, 0, 0, 0.1)',
+  surface: '#ffffff',
+  overlay: 'rgba(28, 25, 23, 0.4)',
+  fontFamily: "'Outfit', -apple-system, sans-serif",
+};
+
+export const darkTheme = {
+  primary: '#2dd4bf',
+  primaryHover: '#5eead4',
+  primaryMuted: 'rgba(45, 212, 191, 0.15)',
+  background: '#0c0a09',
+  backgroundAlt: '#1c1917',
+  text: '#fafaf9',
+  textMuted: '#a8a29e',
+  cardBackground: '#1c1917',
+  cardBorder: 'rgba(255, 255, 255, 0.06)',
+  cardShadow: '0 4px 24px rgba(0, 0, 0, 0.4)',
+  cardShadowHover: '0 12px 40px rgba(0, 0, 0, 0.5)',
+  surface: '#292524',
+  overlay: 'rgba(0, 0, 0, 0.6)',
+  fontFamily: "'Outfit', -apple-system, sans-serif",
+};

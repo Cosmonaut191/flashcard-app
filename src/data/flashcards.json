@@ -1,0 +1,227 @@
+{
+  "topics": [
+    {
+      "id": "number-types-notation",
+      "name": "Number types & notation",
+      "description": "BigInt, hex, binary, octal, e-notation, and number formats",
+      "cards": [
+        {"question": "What are the two types of numbers in modern JavaScript?", "answer": "1. Regular numbers (64-bit format IEEE-754)\n2. BigInt numbers"},
+        {"question": "How can you make large numbers more readable in JavaScript?", "answer": "Use underscore as a separator, e.g., 1_000_000_000"},
+        {"question": "What does 'e' represent in number notation like 1e9?", "answer": "It represents the number of zeroes after 1, so 1e9 is 1 billion (1,000,000,000)"},
+        {"question": "How do you write very small numbers in JavaScript?", "answer": "Use negative exponent notation, e.g., 1e-6 for 0.000001"},
+        {"question": "How can you write hexadecimal numbers in JavaScript?", "answer": "Use the '0x' prefix, e.g., 0xff represents 255"},
+        {"question": "How do you write binary numbers in JavaScript?", "answer": "Use the '0b' prefix, e.g., 0b1111 represents 15"},
+        {"question": "What is the octal prefix in JavaScript?", "answer": "Use the '0o' prefix, e.g., 0o10 represents 8"},
+        {"question": "What method converts a number to a string in a different base?", "answer": "num.toString(base), where base is between 2 and 36"},
+        {"question": "How do you represent the number 255 in hexadecimal?", "answer": "255 in hexadecimal is 0xff"},
+        {"question": "What is the binary representation of 255?", "answer": "The binary representation of 255 is 0b11111111"},
+        {"question": "What is the octal representation of 255?", "answer": "The octal representation of 255 is 0o377"}
+      ]
+    },
+    {
+      "id": "rounding-decimals",
+      "name": "Rounding & decimals",
+      "description": "Math.floor, ceil, round, trunc, and toFixed",
+      "cards": [
+        {"question": "What does the 'Math.floor()' method do?", "answer": "It rounds down to the nearest integer"},
+        {"question": "What does the 'Math.ceil()' method do?", "answer": "It rounds up to the nearest integer"},
+        {"question": "What does the 'Math.round()' method do?", "answer": "It rounds to the nearest integer"},
+        {"question": "What does the 'Math.trunc()' method do?", "answer": "It removes the fractional part of the number without rounding"},
+        {"question": "How can you round a number to a specific decimal place in JavaScript?", "answer": "Use the toFixed(n) method, where n is the number of decimal places"},
+        {"question": "What is the difference between Math.floor() and Math.trunc()?", "answer": "Math.floor() rounds down, Math.trunc() removes the fractional part without rounding"},
+        {"question": "How can you convert a number into a string with a specific number of decimal places?", "answer": "Use the toFixed(n) method"},
+        {"question": "What is the method to round a number to the nearest integer?", "answer": "Math.round()"},
+        {"question": "How do you convert a number to an integer by removing the fractional part?", "answer": "Use the Math.trunc() method"},
+        {"question": "What does 1e3 represent in JavaScript?", "answer": "1e3 represents 1,000 (1 followed by 3 zeroes)"}
+      ]
+    },
+    {
+      "id": "precision-parsing",
+      "name": "Precision & parsing",
+      "description": "Floating-point precision, NaN, isFinite, parseInt, parseFloat",
+      "cards": [
+        {"question": "What happens when you add 0.1 + 0.2 in JavaScript?", "answer": "It returns 0.30000000000000004 due to floating-point precision loss"},
+        {"question": "What function checks if a value is NaN in JavaScript?", "answer": "isNaN() or Number.isNaN()"},
+        {"question": "What function checks if a value is a finite number in JavaScript?", "answer": "isFinite() or Number.isFinite()"},
+        {"question": "How do you parse an integer from a string in JavaScript?", "answer": "Use the parseInt() function"},
+        {"question": "How do you parse a floating-point number from a string in JavaScript?", "answer": "Use the parseFloat() function"},
+        {"question": "What does 'parseInt(str, base)' do in JavaScript?", "answer": "It parses a string into an integer using the specified base"},
+        {"question": "What is the default base for parseInt() if not specified?", "answer": "The default base is 10 (decimal)"},
+        {"question": "How do you convert a string containing a number into a floating-point number?", "answer": "Use the parseFloat() function"},
+        {"question": "What does the method Number.isNaN() do?", "answer": "It checks whether a value is NaN and is of the number type"},
+        {"question": "How can you check if a string contains a valid number?", "answer": "Use isFinite() or Number.isFinite()"},
+        {"question": "How do you check whether a value is a finite number in JavaScript?", "answer": "Use isFinite(value)"}
+      ]
+    },
+    {
+      "id": "math-safe-integers",
+      "name": "Math methods & safe integers",
+      "description": "Math.random, max, min, pow, safe integer range, isInteger",
+      "cards": [
+        {"question": "What method generates a random number between 0 and 1?", "answer": "Math.random()"},
+        {"question": "What method returns the maximum value from a list of numbers?", "answer": "Math.max()"},
+        {"question": "What method returns the minimum value from a list of numbers?", "answer": "Math.min()"},
+        {"question": "What method raises a number to a certain power?", "answer": "Math.pow(base, exponent)"},
+        {"question": "What is the largest integer that can be safely represented in JavaScript?", "answer": "The largest safe integer is (2^53 - 1), which is 9007199254740991"},
+        {"question": "How is the Number.MAX_SAFE_INTEGER constant used?", "answer": "It represents the largest safe integer (9007199254740991) in JavaScript"},
+        {"question": "What does the Number.MIN_SAFE_INTEGER constant represent?", "answer": "It represents the smallest safe integer (-9007199254740991)"},
+        {"question": "How can you check if a number is an integer in JavaScript?", "answer": "Use the Number.isInteger() function"},
+        {"question": "What method would you use to generate a random floating-point number?", "answer": "Math.random()"},
+        {"question": "How do you find the absolute value of a number in JavaScript?", "answer": "Use Math.abs()"}
+      ]
+    },
+    {
+      "id": "comparison-special-values",
+      "name": "Comparison & special values",
+      "description": "Object.is, NaN, -0, Infinity, and edge cases",
+      "cards": [
+        {"question": "How do you compare two values for exact equality, including NaN and -0?", "answer": "Use Object.is() for a more reliable comparison"},
+        {"question": "What does Object.is(NaN, NaN) return?", "answer": "It returns true because Object.is() can correctly compare NaN values"},
+        {"question": "What does Object.is(0, -0) return?", "answer": "It returns false because Object.is() treats 0 and -0 as different values"},
+        {"question": "How do you represent the number 123456 in base 36?", "answer": "Use 123456..toString(36), which gives '2n9c'"},
+        {"question": "What is the result of alert(9999999999999999)?", "answer": "It shows 10000000000000000 due to precision loss"},
+        {"question": "What special numeric values can JavaScript represent?", "answer": "JavaScript can represent Infinity, -Infinity, and NaN"}
+      ]
+    },
+        {
+          "id": "react-native-architecture",
+          "name": "React Native Architecture",
+          "description": "Bridge, JSI, New Architecture, Fabric, TurboModules",
+          "cards": [
+            {
+              "question": "What is the traditional React Native architecture?",
+              "answer": "The traditional React Native architecture is based on three main threads: the JS thread, the Native/UI thread, and the Bridge. The JavaScript code runs on the JS thread, native UI updates happen on the main thread, and communication between them occurs asynchronously via the Bridge. The Bridge serializes messages to JSON and sends them across threads, which can cause performance bottlenecks in high-frequency updates."
+            },
+            {
+              "question": "What is the React Native Bridge and why is it slow?",
+              "answer": "The Bridge is the communication layer between JavaScript and Native modules. It works asynchronously and serializes data into JSON before sending it across threads. This serialization/deserialization process and batched communication introduce latency, especially when sending large payloads or high-frequency events like animations."
+            },
+            {
+              "question": "What is JSI in React Native?",
+              "answer": "JSI (JavaScript Interface) is a C++ abstraction layer that allows direct communication between JavaScript and Native code without going through the Bridge. It enables synchronous calls and removes JSON serialization overhead, significantly improving performance for complex modules."
+            },
+            {
+              "question": "What are TurboModules?",
+              "answer": "TurboModules are part of the new architecture. They allow lazy loading of native modules and communicate via JSI instead of the Bridge. This improves startup time and reduces memory consumption because modules are only initialized when needed."
+            },
+            {
+              "question": "What is Fabric?",
+              "answer": "Fabric is the new rendering system in React Native. It replaces the old UI Manager and enables synchronous layout calculations, better concurrency support, and improved performance. Fabric works closely with JSI and React's concurrent features."
+            }
+          ]
+        },
+        {
+          "id": "performance-optimization",
+          "name": "Performance Optimization",
+          "description": "Re-renders, memoization, lists, animations, Hermes",
+          "cards": [
+            {
+              "question": "How do you prevent unnecessary re-renders in React Native?",
+              "answer": "Use React.memo for functional components, PureComponent for class components, and hooks like useMemo and useCallback to memoize values and functions. Also ensure proper key usage in lists and avoid inline functions or objects in render methods that cause reference changes."
+            },
+            {
+              "question": "How does FlatList optimize large lists?",
+              "answer": "FlatList uses windowing and virtualization. It renders only visible items plus a buffer and recycles views when scrolling. Important props include initialNumToRender, windowSize, maxToRenderPerBatch, and getItemLayout to improve performance."
+            },
+            {
+              "question": "How would you optimize a slow React Native screen?",
+              "answer": "First, use profiling tools like Flipper or React DevTools to detect re-renders. Optimize large lists using FlatList. Reduce heavy computations in render. Use memoization. Offload heavy work to native modules or background threads. Enable Hermes for better JS execution performance."
+            },
+            {
+              "question": "What is Hermes and why is it useful?",
+              "answer": "Hermes is a lightweight JavaScript engine optimized for React Native. It reduces app startup time, decreases memory usage, and improves performance by compiling JS to bytecode ahead of time."
+            },
+            {
+              "question": "How do you handle heavy computations in React Native?",
+              "answer": "Heavy computations should not block the JS thread. You can use InteractionManager, move logic to native modules, use JSI-based libraries, or use background threads to prevent UI freezes."
+            }
+          ]
+        },
+        {
+          "id": "navigation-deep-linking",
+          "name": "Navigation & Deep Linking",
+          "description": "React Navigation, deep links, app links, auth flows",
+          "cards": [
+            {
+              "question": "How does React Navigation manage navigation state?",
+              "answer": "React Navigation maintains navigation state internally using a stack-based or tab-based router. It stores route configurations and transitions between screens while preserving history. NavigationContainer wraps the app and manages linking and deep linking configurations."
+            },
+            {
+              "question": "What is deep linking in React Native?",
+              "answer": "Deep linking allows opening specific screens in an app using a URL. It can use custom schemes (myapp://) or universal/app links (https://). React Navigation supports linking configuration to map URLs to screens."
+            },
+            {
+              "question": "What is the difference between deep links and universal links?",
+              "answer": "Deep links use custom schemes and work only if the app is installed. Universal links (iOS) and App Links (Android) use HTTPS URLs and work even if the app is not installed, redirecting to the app store if necessary."
+            },
+            {
+              "question": "How do you handle authentication flows in navigation?",
+              "answer": "Use conditional navigation stacks. For example, render AuthStack if the user is not logged in, and MainStack if authenticated. Store auth state globally using Context or Redux."
+            }
+          ]
+        },
+        {
+          "id": "state-management",
+          "name": "State Management",
+          "description": "Redux, Context API, RTK Query, performance trade-offs",
+          "cards": [
+            {
+              "question": "When would you use Redux over Context API?",
+              "answer": "Redux is preferred for large-scale applications with complex state logic, middleware, and predictable state transitions. Context API is suitable for smaller global states like themes or authentication. Redux also provides better debugging via DevTools."
+            },
+            {
+              "question": "What is Redux Toolkit?",
+              "answer": "Redux Toolkit simplifies Redux setup by providing createSlice, createAsyncThunk, and configureStore. It reduces boilerplate and encourages best practices like immutable updates using Immer."
+            },
+            {
+              "question": "What is RTK Query?",
+              "answer": "RTK Query is a data-fetching and caching solution built into Redux Toolkit. It provides automatic caching, background updates, polling, and request deduplication."
+            },
+            {
+              "question": "What are common performance issues with global state?",
+              "answer": "Unnecessary re-renders when the entire component tree subscribes to large state slices. Use selectors, memoization, and split reducers carefully."
+            }
+          ]
+        },
+        {
+          "id": "native-modules-platform",
+          "name": "Native Modules & Platform APIs",
+          "description": "Bridging, platform-specific code, permissions",
+          "cards": [
+            {
+              "question": "How do you create a native module in React Native?",
+              "answer": "Create a native class in Java/Kotlin (Android) or Swift/Objective-C (iOS), expose methods using annotations (e.g., @ReactMethod), and register it in the ReactPackage. In the new architecture, use TurboModules and JSI."
+            },
+            {
+              "question": "How do you write platform-specific code?",
+              "answer": "Use Platform.OS checks or create separate files like Component.ios.js and Component.android.js. React Native automatically resolves platform-specific files."
+            },
+            {
+              "question": "How do you handle runtime permissions?",
+              "answer": "Use libraries like react-native-permissions. On Android, request permissions explicitly. On iOS, define permission descriptions in Info.plist."
+            }
+          ]
+        },
+        {
+          "id": "testing-debugging",
+          "name": "Testing & Debugging",
+          "description": "Jest, Detox, Flipper, debugging production issues",
+          "cards": [
+            {
+              "question": "How do you test React Native components?",
+              "answer": "Use Jest and React Native Testing Library for unit and component testing. Mock native modules and API calls. Focus on behavior rather than implementation details."
+            },
+            {
+              "question": "What is Detox?",
+              "answer": "Detox is an end-to-end testing framework for React Native. It simulates real user interactions and runs tests on emulators or real devices."
+            },
+            {
+              "question": "How do you debug performance issues in production?",
+              "answer": "Use tools like Flipper, React DevTools, and performance monitors. Integrate crash reporting tools like Firebase Crashlytics or Sentry to track production errors."
+            }
+          ]
+        }
+      
+    
+  ]
+}
